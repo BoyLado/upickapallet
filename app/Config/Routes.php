@@ -44,10 +44,7 @@ $routes->get('/', 'NavigationController');
  *  FRONT END NAVIGATION 
  *  ------------------------------------------------------------------
  */
-$routes->get('pre-registration', 'NavigationController::preRegistration');
 $routes->get('login', 'NavigationController::login');
-
-$routes->get('pre-registration-confirmation/(:any)', 'NavigationController::preRegistrationConfirmation/$1');
 
 /*
  * --------------------------------------------------------------------
@@ -59,15 +56,6 @@ $routes->post('user-forgot-password', 'IndexController::forgotPassword');
 $routes->post('user-change-password', 'IndexController::changePassword');
 $routes->post('user-sign-up', 'IndexController::signUp');
 $routes->get('user-logout', 'IndexController::logout');
-
-////////////////////////////////////////////////////////////////////
-//////////////////////// PRE REGISTRATION //////////////////////////
-////////////////////////////////////////////////////////////////////
-
-$routes->get('load-auction-dates', 'PreRegistrationController::loadAuctionDates');
-$routes->post('pre-registration-with-season-pass', 'PreRegistrationController::preRegistrationWithSeasonPass');
-$routes->post('pre-registration-without-season-pass', 'PreRegistrationController::preRegistrationWithoutSeasonPass');
-$routes->get('confirm-pre-registration/(:any)/(:any)', 'PreRegistrationController::confirmPreRegistration/$1/$2');
 
 /*
  *  ------------------------------------------------------------------

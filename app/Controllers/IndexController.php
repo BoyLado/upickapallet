@@ -228,10 +228,10 @@ class IndexController extends BaseController
     public function logout()
     {
         $userData = [
-            'arkonorllc_user_id',
-            'arkonorllc_user_firstName',
-            'arkonorllc_user_lastName',
-            'arkonorllc_user_loggedIn'
+            'upp_user_id',
+            'upp_user_firstName',
+            'upp_user_lastName',
+            'upp_user_loggedIn'
         ];
         $this->session->destroy();
         return redirect()->to(base_url());

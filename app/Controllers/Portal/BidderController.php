@@ -14,24 +14,24 @@ class BidderController extends BaseController
 
     public function loadBidders()
     {
-        // if(session()->has('upp_user_loggedIn'))
-        // {
-        //     if(session()->get('upp_user_loggedIn'))
-        //     {
+        if(session()->has('upp_user_loggedIn'))
+        {
+            if(session()->get('upp_user_loggedIn'))
+            {
                 $fields = $this->request->getGet();
 
                 $arrResult = $this->bidders->loadBidders($fields['order'],$fields['textSearch']);
                 return $this->response->setJSON($arrResult);
-        //     }
-        //     else
-        //     {
-        //         return $this->response->setJSON('Access denied!');
-        //     }
-        // }
-        // else
-        // {
-        //     return $this->response->setJSON('Access denied!');
-        // }  
+            }
+            else
+            {
+                return $this->response->setJSON('Access denied!');
+            }
+        }
+        else
+        {
+            return $this->response->setJSON('Access denied!');
+        }  
     }
 
     public function addBidder()

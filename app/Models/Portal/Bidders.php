@@ -298,6 +298,7 @@ class Bidders extends Model
             'a.created_date',
             'b.id as bidder_id',
             'b.bidder_number',
+            'b.company_name',
             'b.first_name',
             'b.last_name',
             'b.address',

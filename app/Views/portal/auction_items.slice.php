@@ -107,45 +107,33 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-4">
           <h5>Auction Item Details</h5>
-          <form id="form_addItem">
-            <table class="table mb-0">
-              <tbody>
-                <tr>
-                  <td class="p-1">
-                    <label>Item Number *:</label>
-                    <input type="text" class="form-control" id="txt_itemNumber" name="txt_itemNumber" required>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p-1">
-                    <label>Item Description *:</label>
-                    <textarea class="form-control" rows="5" id="txt_itemDescription" name="txt_itemDescription" required></textarea>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p-1">
-                    <label>Bidder Number/Name *:</label>
-                    <select class="form-control select2" id="slc_bidderNumber" name="slc_bidderNumber" style="width: 100%;" required>
-                      <option value="">Choose Bidder</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p-1">
-                    <label>Amount *:</label>
-                    <input type="number" class="form-control" id="txt_winningAmount" name="txt_winningAmount" required>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="p-1">
-                    <div class="float-right">
-                      <button type="submit" class="btn btn-primary" form="form_addItem" id="btn_nextItem">Next Item</button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </form> 
+          <div class="card">
+            <div class="card-body">
+              <form id="form_addItem">
+                <div class="form-group">
+                  <label>Item Number *:</label>
+                  <input type="text" class="form-control" id="txt_itemNumber" name="txt_itemNumber" required>
+                </div>
+                <div class="form-group">
+                  <label>Item Description *:</label>
+                  <textarea class="form-control" rows="5" id="txt_itemDescription" name="txt_itemDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Bidder Number/Name *:</label>
+                  <select class="form-control select2" id="slc_bidderNumber" name="slc_bidderNumber" style="width: 100%;" required>
+                    <option value="">Choose Bidder</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Amount *:</label>
+                  <input type="number" class="form-control" id="txt_winningAmount" name="txt_winningAmount" required>
+                </div>
+                <div class="float-right">
+                  <button type="submit" class="btn btn-primary" form="form_addItem" id="btn_nextItem">Next Item</button>
+                </div>
+              </form>
+            </div>
+          </div> 
         </div>
         <div class="col-sm-12 col-md-12 col-lg-8">
           <h5>Auction Item Lists (<?php echo date('Y-m-d'); ?>)</h5>

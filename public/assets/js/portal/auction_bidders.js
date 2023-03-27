@@ -479,6 +479,7 @@ const BIDDERS = (function(){
 		  data : {bidderId : bidderId},
 		  success : function(data)
 		  {
+		  	console.log(data);
 		  	$('#modal_bidderDetails').modal('show');
 		  	$('#lnk_details').addClass('active');
 		  	$('#lnk_guests').removeClass('active');

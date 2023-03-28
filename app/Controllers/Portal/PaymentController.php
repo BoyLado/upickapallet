@@ -121,8 +121,8 @@ class PaymentController extends BaseController
             $data['bidderNumber']           = $arrBidder['bidder_number'];
             $data['bidderName']             = $arrBidder['first_name'] . " " . $arrBidder['last_name'];
             $data['bidderEmailAddress']     = $arrBidder['email'];
-            $data['bidderPhoneNumber']     = $arrBidder['phone_number'];
-            $data['bidderAddress']     = $arrBidder['address'];
+            $data['bidderPhoneNumber']      = $arrBidder['phone_number'];
+            $data['bidderAddress']          = $arrBidder['address'];
             $data['numberOfItems']          = $numberOfItems;
             $data['arrItems']               = $arrPayments;
             $data['subTotal']               = number_format($subTotal,2);

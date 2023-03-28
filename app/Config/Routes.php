@@ -92,6 +92,7 @@ $routes->post('portal/remove-bidder', 'Portal\BidderController::removeBidder');
 $routes->post('portal/check-upload-file', 'Portal\BidderController::checkUploadFile');
 $routes->post('portal/upload-season-pass', 'Portal\BidderController::uploadSeasonPass');
 $routes->get('portal/download-conflicts/(:any)', 'Portal\BidderController::downloadConflicts/$1');
+$routes->post('portal/send-login-credentials', 'Portal\BidderController::sendLoginCredentials');
 
 ////////////////////////////////////////////////////////////////////
 //////////////////////// ITEMS /////////////////////////////////////

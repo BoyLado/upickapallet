@@ -262,8 +262,39 @@ class BidderController extends BaseController
 
         $arrWhere = 'bidder_number';
 
+        // insert
+        if(count($forInsert) > 0)
+        {
+            $arrForInsert = [];
+            foreach ($forInsert as $key => $value) 
+            {
+                $password = encrypt_code(generate_code());
+                $arrForInsert[] = [
+                    'bidder_number'     => $value['bidder_number'],
+                    'first_name'        => $value['first_name'],
+                    'last_name'         => $value['last_name'],
+                    'email'             => $value['email'],
+                    'password'          => $password,
+                    'phone_number'      => $value['phone_number'],
+                    'address'           => $value['address'],
+                    'season_pass'       => $value['season_pass'],
+                    'status'            => $value['status']
+                ];
+
+                $emailSender    = 'customerservice@upickapallet.com';
+                $emailReceiver  = $value['email'];
+
+                $data['subjectTitle']           = 'Login Credentials';
+                $data['bidderNumber']           = $value['bidder_number'];
+                $data['bidderName']             = $value['first_name'] . " " . $value['last_name'];
+                $data['bidderEmailAddress']     = $value['email'];
+                $data['bidderPassword']         = decrypt_code($password);
+
+                sendSliceMail('login_credentials',$emailSender,$emailReceiver,$data);
+            }
+        }
         //insert
-        $uploadResult['inserted_rows'] = (count($forInsert) > 0)?$this->bidders->addBidders($forInsert) : 0;
+        $uploadResult['inserted_rows'] = (count($forInsert) > 0)?$this->bidders->addBidders($arrForInsert) : 0;
         //update 
         $uploadResult['updated_rows'] = (count($forUpdate) > 0)?$this->bidders->editBidders($forUpdate, $arrWhere) : 0;
 
@@ -283,6 +314,27 @@ class BidderController extends BaseController
         // $filename = "export_".$date.".xlsx";
 
         // downloadConflicts($filename,$Text);
+    }
+
+    public function sendLoginCredentials()
+    {
+        $fields = $this->request->getPost();
+
+        $result = $this->bidders->getBidderPass($fields['bidderId']);
+
+        $emailSender    = 'customerservice@upickapallet.com';
+        $emailReceiver  = $result['email'];
+
+        $data['subjectTitle']           = 'Login Credentials';
+        $data['bidderNumber']           = $result['bidder_number'];
+        $data['bidderName']             = $result['first_name'] . " " . $result['last_name'];
+        $data['bidderEmailAddress']     = $result['email'];
+        $data['bidderPassword']         = decrypt_code($result['password']);
+
+        $emailResult = sendSliceMail('login_credentials',$emailSender,$emailReceiver,$data);
+
+        $msgResult[] = ($emailResult > 0)? "Success" : "Database error";
+        return $this->response->setJSON($msgResult);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////

@@ -5,7 +5,7 @@ return [
 	'forgot_password' 					=> 'Forgot Password',
 	'pre_registration' 					=> 'Pre Registration',
 	'upp_receipt' 							=> 'UPP Receipt',
-	'organization_email' 				=> 'Organization Email',
+	'login_credentials' 				=> 'Login Credentials',
 	'unsubscribe_confirmation' 	=> 'Unsubscribe Confirmation',
 	'unsubscribe_notification'  => 'Unsubscribe Notification',
 ];

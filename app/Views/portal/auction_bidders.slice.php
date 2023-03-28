@@ -327,6 +327,9 @@
 
             </div>
             <div class="modal-footer modal-footer--sticky">
+              <button type="button" class="btn btn-primary" id="btn_sendLoginCredentials">
+                Send Login Credentials
+              </button>
               <button type="submit" class="btn btn-primary" form="form_editBidder">Save Changes</button>
             </div>
           </div>
@@ -488,6 +491,11 @@
     $('#form_importSeasonPass').on('submit',function(e){
       e.preventDefault();
       BIDDERS.uploadSeasonPass();
+    });
+
+    $('#btn_sendLoginCredentials').on('click',function(){
+      let bidderId = $('#txt_bidderId').val();
+      BIDDERS.sendLoginCredentials(bidderId);
     });
 
   });

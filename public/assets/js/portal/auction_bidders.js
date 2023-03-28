@@ -40,6 +40,8 @@ const BIDDERS = (function(){
 		    	}
 		    	let bidderName = (value['first_name'] != null)? `${value['first_name']} ${value['last_name']}` : '---';
 		    	let email = (value['email'] != null)? value['email'] : '---';
+
+		    	let confirmed = (value['password'] != null || value['season_pass'] != null)? '<i class="fa fa-check text-green"></i>' : '';
 		    	
 		    	bidders += `<div class="col-md-6 col-lg-6 col-xl-3 pt-2">
 							          <div class="card mb-2 bg-gradient-dark zoom">
@@ -49,7 +51,7 @@ const BIDDERS = (function(){
 							                <h5 class="card-title text-primary text-white">
 							                  <span class="text-bold text-red">Bidder #${value['bidder_number']}</span> | ${bidderName}</h5>
 							                <br>
-							                <span class="card-text text-muted"><small>${email}</small></span>
+							                <span class="card-text text-muted"><small>${confirmed} ${email}</small></span>
 							                <div class="float-right">
 							                  <a href="javascript:void(0)" onclick="BIDDERS.selectBidder(${value['id']})" >Edit</a> |
 							                  <a href="javascript:void(0)" onclick="BIDDERS.removeBidder(${value['id']})" >Delete</a>
@@ -405,6 +407,47 @@ const BIDDERS = (function(){
           $('body').waitMe('hide');	
           location.reload();			
 				}
+			});
+		}
+	}
+
+	thisBidder.sendLoginCredentials = function(bidderId)
+	{
+		if(confirm('Please Confirm'))
+		{
+			let formData = new FormData();
+
+			formData.set("bidderId", bidderId);
+			$('body').waitMe(_waitMeLoaderConfig);
+			$.ajax({
+				/* BidderController->sendLoginCredentials() */
+			  url : `${baseUrl}/portal/send-login-credentials`,
+			  method : 'post',
+			  dataType: 'json',
+			  processData: false, // important
+			  contentType: false, // important
+			  data : formData,
+			  success : function(result)
+			  {
+			    if(result == 'Success')
+			    {
+	          Toast.fire({
+			        icon: 'success',
+			        title: 'Success! <br>Login credentials sent successfully.',
+			      });
+			      setTimeout(function(){
+	            window.location.replace(`${baseUrl}/portal/auction-bidders`);
+	          }, 1000);
+			    }
+			    else
+			    {
+	          Toast.fire({
+			        icon: 'error',
+			        title: 'Error! <br>Database error!'
+			      });
+			    }
+			    $('body').waitMe('hide');
+			  }
 			});
 		}
 	}

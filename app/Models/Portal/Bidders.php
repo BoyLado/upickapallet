@@ -54,6 +54,7 @@ class Bidders extends Model
             'a.address',
             'a.phone_number',
             'a.email',
+            'a.password',
             'a.id_number',
             'a.id_picture',
             'a.season_pass',
@@ -244,6 +245,35 @@ class Bidders extends Model
         }
     }
 
+    ////////////////////////////////////////////////////////////
+    ///// BidderController->sendLoginCredentials()
+    ////////////////////////////////////////////////////////////
+    public function getBidderPass($bidderId)
+    {
+        $columns = [
+            'a.id',
+            'a.bidder_number',
+            'a.first_name',
+            'a.last_name',
+            'a.address',
+            'a.phone_number',
+            'a.email',
+            'a.password',
+            'a.id_number',
+            'a.id_picture',
+            'a.season_pass',
+            'a.created_by',
+            'a.created_date',
+            'a.updated_by',
+            'a.updated_date',
+        ];
+
+        $builder = $this->db->table('bidders a')->select($columns);
+        $builder->where('a.id',$bidderId);
+        $query = $builder->get();
+        return  $query->getRowArray();
+    }
+
 
     ////////////////////////////////////////////////////////////
     ///// BidderController->uploadSeasonPass()
@@ -288,6 +318,9 @@ class Bidders extends Model
         return  $query->getResultArray();
     }
 
+    ////////////////////////////////////////////////////////////
+    ///// BidderController->loadBidderDetails()
+    ////////////////////////////////////////////////////////////
     public function loadBidderDetails($bidderId)
     {
         $columns = [
@@ -318,6 +351,9 @@ class Bidders extends Model
         return  $query->getRowArray();
     }
 
+    ////////////////////////////////////////////////////////////
+    ///// BidderController->loadBidderDetails()
+    ////////////////////////////////////////////////////////////
     public function loadBidderGuests($registrationId)
     {
         $columns = [

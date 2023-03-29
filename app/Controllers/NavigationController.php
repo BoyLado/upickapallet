@@ -8,9 +8,6 @@ class NavigationController extends BaseController
 {
     public function index()
     {
-        // $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-        // $uri = (isset($_SERVER['HTTPS']))? 'https://' : 'http://' . $_SERVER['SERVER_NAME'] . '/' . $uriSegments[1] . '/login';
-        // return redirect()->to($uri);
         if($this->session->has('upp_user_loggedIn'))
         {
             if($this->session->get('upp_user_loggedIn'))
@@ -20,7 +17,7 @@ class NavigationController extends BaseController
         }
         $data['pageTitle'] = "Login | U Pick A Pallet";
         $data['userAuthCode'] = "";
-        return $this->slice->view('login', $data);
+        return $this->slice->view('home', $data);
     }
 
     public function login()

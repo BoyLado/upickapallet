@@ -80,61 +80,10 @@ $routes->get('my-account', 'Portal\NavigationController::myAccount');
  *  BACK END FUNCTIONS 
  *  ------------------------------------------------------------------
  */
-////////////////////////////////////////////////////////////////////
-//////////////////////// BIDDERS ///////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-$routes->get('portal/load-bidders', 'Portal\BidderController::loadBidders');
-$routes->post('portal/add-bidder', 'Portal\BidderController::addBidder');
-$routes->get('portal/select-bidder', 'Portal\BidderController::selectBidder');
-$routes->post('portal/edit-bidder', 'Portal\BidderController::editBidder');
-$routes->post('portal/remove-bidder', 'Portal\BidderController::removeBidder');
-$routes->post('portal/check-upload-file', 'Portal\BidderController::checkUploadFile');
-$routes->post('portal/upload-season-pass', 'Portal\BidderController::uploadSeasonPass');
-$routes->get('portal/download-conflicts/(:any)', 'Portal\BidderController::downloadConflicts/$1');
-$routes->post('portal/send-login-credentials', 'Portal\BidderController::sendLoginCredentials');
-
-////////////////////////////////////////////////////////////////////
-//////////////////////// ITEMS /////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-$routes->get('portal/load-items', 'Portal\ItemController::loadItems');
-$routes->post('portal/add-item', 'Portal\ItemController::addItem');
-$routes->get('portal/select-item', 'Portal\ItemController::selectItem');
-$routes->post('portal/edit-item', 'Portal\ItemController::editItem');
-$routes->post('portal/remove-item', 'Portal\ItemController::removeItem');
-
-////////////////////////////////////////////////////////////////////
-//////////////////////// ITEMS /////////////////////////////////////
-////////////////////////////////////////////////////////////////////
-
-$routes->get('portal/load-winners', 'Portal\WinnerController::loadWinners');
-$routes->get('portal/load-winner-items', 'Portal\WinnerController::loadWinnerItems');
-
-////////////////////////////////////////////////////////////////////
-//////////////////////// PAYMENTS //////////////////////////////////
-////////////////////////////////////////////////////////////////////
-$routes->get('portal/load-payments', 'Portal\PaymentController::loadPayments');
-$routes->get('portal/load-payment-details', 'Portal\PaymentController::loadPaymentDetails');
-$routes->post('portal/add-payment', 'Portal\PaymentController::addPayment');
 
 
-////////////////////////////////////////////////////////////////////
-//////////////////////// CALENDAR //////////////////////////////////
-////////////////////////////////////////////////////////////////////
-$routes->get('portal/load-auctions', 'Portal\AuctionController::loadAuctions');
-$routes->post('portal/add-auction', 'Portal\AuctionController::addAuction');
-$routes->get('portal/select-auction', 'Portal\AuctionController::selectAuction');
-$routes->post('portal/edit-auction', 'Portal\AuctionController::editAuction');
-$routes->post('portal/remove-auction', 'Portal\AuctionController::removeAuction');
 
 
-////////////////////////////////////////////////////////////////////
-//////////////////////// REGISTERED BIDDERS ////////////////////////
-////////////////////////////////////////////////////////////////////
-
-$routes->get('portal/load-registered-bidders', 'Portal\BidderController::loadRegisteredBidders');
-$routes->get('portal/load-bidder-details', 'Portal\BidderController::loadBidderDetails');
 
 
 

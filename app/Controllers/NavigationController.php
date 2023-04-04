@@ -20,6 +20,12 @@ class NavigationController extends BaseController
         return $this->slice->view('home', $data);
     }
 
+    public function signUp()
+    {
+     $data['pageTitle'] = "Sign Up  | U Pick A Pallet";
+     return $this->slice->view('sign_up', $data);
+    }
+
     public function login()
     {
         if($this->session->has('upp_user_loggedIn'))
@@ -63,18 +69,5 @@ class NavigationController extends BaseController
         return $this->slice->view('change_password', $data);
     }
 
-    public function signUp($userId, $userAuthCode)
-    {
-        if($this->session->has('upp_user_loggedIn'))
-        {
-            if($this->session->get('upp_user_loggedIn'))
-            {
-                return redirect()->to(base_url() . '/portal/auction-dashboard');
-            }
-        }
-        $data['pageTitle'] = "Sign Up  | U Pick A Pallet";
-        $data['userId'] = $userId;
-        $data['userAuthCode'] = $userAuthCode;
-        return $this->slice->view('sign_up', $data);
-    }
+    
 }

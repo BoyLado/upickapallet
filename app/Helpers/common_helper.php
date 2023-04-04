@@ -291,15 +291,15 @@ function sample()
 function sendSliceMail($type,$senderEmail,$receiverEmail,&$data)
 {
 	$config = [
-		'protocol' 	=> 'smtp',
-		'SMTPHost'  => 'smtp.googlemail.com',
-		'SMTPPort'  => 465,
-		'SMTPCrypto'=> 'ssl',
-		'SMTPUser'  => 'customerservice@upickapallet.com',
-		'SMTPPass'  => 'xzoeyfaqlapvwozk',
-		'mailType'  => 'html', 
-		'charset'   => 'iso-8859-1',
-		'wordWrap'  => true
+      'protocol'  => 'smtp',
+      'SMTPHost'  => 'smtp.googlemail.com',
+      'SMTPPort'  => 465,
+      'SMTPCrypto'=> 'ssl',
+      'SMTPUser'  => 'customerservice@upickapallet.com',
+      'SMTPPass'  => 'xzoeyfaqlapvwozk',
+      'mailType'  => 'html', 
+      'charset'   => 'iso-8859-1',
+      'wordWrap'  => true
 	];
 
 	$CISlice = new \App\Libraries\SliceLibrary();

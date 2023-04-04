@@ -8,4 +8,5 @@ return [
 	'login_credentials' 				=> 'Login Credentials',
 	'unsubscribe_confirmation' 	=> 'Unsubscribe Confirmation',
 	'unsubscribe_notification'  => 'Unsubscribe Notification',
+   'sign_up'                        => 'Sign Up for Season Pass',
 ];

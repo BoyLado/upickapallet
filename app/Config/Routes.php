@@ -44,6 +44,7 @@ $routes->get('/', 'NavigationController');
  *  FRONT END NAVIGATION 
  *  ------------------------------------------------------------------
  */
+$routes->get('sign-up', 'NavigationController::signUp');
 $routes->get('login', 'NavigationController::login');
 
 /*
@@ -54,7 +55,7 @@ $routes->get('login', 'NavigationController::login');
 $routes->post('user-login', 'IndexController::login');
 $routes->post('user-forgot-password', 'IndexController::forgotPassword');
 $routes->post('user-change-password', 'IndexController::changePassword');
-$routes->post('user-sign-up', 'IndexController::signUp');
+$routes->post('customer-sign-up', 'IndexController::signUp');
 $routes->get('user-logout', 'IndexController::logout');
 
 /*

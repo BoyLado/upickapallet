@@ -11,6 +11,61 @@ const INDEX = (function(){
     timer: 3000
   });
 
+  thisIndex.signUp = function(cardToken, thisForm)
+  {
+    if($('#txt_password').val() == $('#txt_confirmPassword').val())
+    {
+      let formData = new FormData(thisForm);
+
+      formData.set('cardToken',cardToken);
+
+      console.log(cardToken);
+
+      $.ajax({
+        // IndexController->signUp();
+        url : `${baseUrl}/customer-sign-up`,
+        method : 'post',
+        dataType: 'json',
+        processData: false, // important
+        contentType: false, // important
+        data : formData,
+        success : function(result)
+        {
+          $('#txt_userEmail').val('');
+
+          console.log(result);
+
+          if(result[0] == "Success")
+          {
+            Toast.fire({
+              icon: 'success',
+              title: 'Success! <br>Sign-up complete!',
+            });
+
+            setTimeout(function(){
+              window.location.replace(`${baseUrl}/login`);
+            }, 1000);
+          }
+          else
+          {
+            Toast.fire({
+              icon: 'error',
+              title: `Error! <br> ${result[0]}`
+            });
+          }
+        }
+      });
+    }
+    else
+    {
+      Toast.fire({
+        icon: 'warning',
+        title: 'Warning! <br>Password confirmation not match!'
+      });
+    }
+    
+  }
+
 	thisIndex.login = function(thisForm)
 	{
 		let formData = new FormData(thisForm);
@@ -153,63 +208,6 @@ const INDEX = (function(){
         title: 'Warning! <br>Password confirmation not match!'
       });
     }  
-  }
-
-  thisIndex.signUp = function(thisForm)
-  {
-    if($('#txt_userPassword').val() == $('#txt_confirmPassword').val())
-    {
-      let formData = new FormData(thisForm);
-
-      $('#btn_signUp').prop('disabled',true);
-      $('#btn_signUp').text('Please wait...');
-
-      $.ajax({
-        // IndexController->signUp();
-        url : `${baseUrl}/user-sign-up`,
-        method : 'post',
-        dataType: 'json',
-        processData: false, // important
-        contentType: false, // important
-        data : formData,
-        success : function(result)
-        {
-          $('#txt_userEmail').val('');
-
-          console.log(result);
-
-          if(result == "Success")
-          {
-            Toast.fire({
-              icon: 'success',
-              title: 'Success! <br>Sign-up complete!',
-            });
-          }
-          else
-          {
-            Toast.fire({
-              icon: 'warning',
-              title: 'Warning! <br>Your account is active, try login.'
-            });
-          }
-
-          setTimeout(function(){
-            window.location.replace(`${baseUrl}/login/${$('#txt_userAuthCode').val()}`);
-          }, 1000);
-
-          $('#btn_signUp').prop('disabled',false);
-          $('#btn_signUp').text('Register');
-        }
-      });
-    }
-    else
-    {
-      Toast.fire({
-        icon: 'warning',
-        title: 'Warning! <br>Password confirmation not match!'
-      });
-    }
-    
   }
 
 	return thisIndex;

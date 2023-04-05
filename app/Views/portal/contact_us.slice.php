@@ -1,4 +1,4 @@
-@extends('template-guest.layout')
+@extends('template.layout')
 
 @section('page_title',$pageTitle)
 
@@ -36,6 +36,7 @@
 <script src="<?php echo base_url(); ?>/public/assets/AdminLTE/plugins/select2/js/select2.full.min.js"></script>
 
 <!-- Custom Scripts -->
+<script type="text/javascript" src="<?php echo base_url(); ?>/public/assets/js/portal/{{ $customScripts }}.js"></script>
 
 <script type="text/javascript">
    $(document).ready(function(){

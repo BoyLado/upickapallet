@@ -21,14 +21,14 @@ class IndexController extends BaseController
     public function login()
     {
         $this->validation->setRules([
-            'txt_userEmail' => [
+            'txt_customerEmail' => [
                 'label'  => 'User Email',
                 'rules'  => 'required',
                 'errors' => [
                     'required' => 'User Email/Username is required'
                 ],
             ],
-            'txt_userPassword' => [
+            'txt_customerPassword' => [
                 'label'  => 'User Password',
                 'rules'  => 'required',
                 'errors' => [
@@ -42,21 +42,21 @@ class IndexController extends BaseController
             $fields = $this->request->getPost();
 
             $logInRequirements = [
-              'user_email'      => $fields['txt_userEmail'],
-              'user_name'       => $fields['txt_userEmail'],
-              'user_password'   => encrypt_code($fields['txt_userPassword']),
-              'user_status'     => '1', //meaning active
+              'email_address'       => $fields['txt_customerEmail'],
+              'customer_username'   => $fields['txt_customerEmail'],
+              'customer_password'   => encrypt_code($fields['txt_customerPassword']),
+              'customer_status'     => '1', //meaning active
             ];
 
-            $validateLogInResult = $this->users->validateLogIn($logInRequirements);
+            $validateLogInResult = $this->customers->validateLogIn($logInRequirements);
 
             if(!empty($validateLogInResult))
             {
               $userData = [
-                'upp_user_id'        => $validateLogInResult['user_id'],
-                'upp_user_firstName' => $validateLogInResult['first_name'],
-                'upp_user_lastName'  => $validateLogInResult['last_name'],
-                'upp_user_loggedIn'  => true
+                'upp_customer_id'        => $validateLogInResult['id'],
+                'upp_customer_firstName' => $validateLogInResult['first_name'],
+                'upp_customer_lastName'  => $validateLogInResult['last_name'],
+                'upp_customer_loggedIn'  => true
               ];
               $this->session->set($userData);
 
@@ -389,10 +389,10 @@ class IndexController extends BaseController
     public function logout()
     {
         $userData = [
-            'upp_user_id',
-            'upp_user_firstName',
-            'upp_user_lastName',
-            'upp_user_loggedIn'
+            'upp_customer_id',
+            'upp_customer_firstName',
+            'upp_customer_lastName',
+            'upp_customer_loggedIn'
         ];
         $this->session->destroy();
         return redirect()->to(base_url());

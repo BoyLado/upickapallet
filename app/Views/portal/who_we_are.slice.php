@@ -1,4 +1,4 @@
-@extends('template-guest.layout')
+@extends('template.layout')
 
 @section('page_title',$pageTitle)
 

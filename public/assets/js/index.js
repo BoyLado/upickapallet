@@ -75,7 +75,7 @@ const INDEX = (function(){
 
     $.ajax({
       // IndexController->login();
-      url : `${baseUrl}/user-login`,
+      url : `${baseUrl}/customer-login`,
       method : 'post',
       dataType: 'json',
       processData: false, // important
@@ -83,8 +83,8 @@ const INDEX = (function(){
       data : formData,
       success : function(result)
       {
-        $('#txt_userEmail').val('');
-        $('#txt_userPassword').val('');
+        $('#txt_customerEmail').val('');
+        $('#txt_customerPassword').val('');
 
         console.log(result);
 
@@ -96,7 +96,7 @@ const INDEX = (function(){
 		      });
 
           setTimeout(function(){
-            window.location.replace(`${baseUrl}/portal/auction-dashboard`);
+            window.location.replace(`${baseUrl}/portal/home`);
           }, 1000);
         }
         else

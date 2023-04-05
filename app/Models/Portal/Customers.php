@@ -76,6 +76,32 @@ class Customers extends Model
           throw $e;
       }
    }
+
+   ////////////////////////////////////////////////////////////
+   ///// IndexController->login();
+   ////////////////////////////////////////////////////////////
+   public function validateLogIn($logInRequirements)
+   {
+       $columns = [
+         'id',
+         'first_name',
+         'last_name'
+       ];
+
+       $where = [
+           'customer_password' => $logInRequirements['customer_password'],
+           'customer_status'   => 1 
+       ];
+
+       $orWhere = [
+           'email_address'       => $logInRequirements['email_address'],
+           'customer_username'   => $logInRequirements['customer_username']
+       ];
+
+       $builder = $this->db->table('customers')->select($columns)->where($where)->groupStart()->orWhere($orWhere)->groupEnd();
+       $query = $builder->get();
+       return  $query->getRowArray();
+   }
    
 
 }

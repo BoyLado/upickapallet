@@ -57,7 +57,7 @@
 
         <form id="form_login">
           <div class="input-group mb-3">
-            <input type="text" class="form-control form-control-sm text-white" style="background: rgba(0, 0, 0, 0.5);" id="txt_userEmail" name="txt_userEmail" placeholder="Email or User Name" required>
+            <input type="text" class="form-control form-control-sm text-white" style="background: rgba(0, 0, 0, 0.5);" id="txt_customerEmail" name="txt_customerEmail" placeholder="Email or User Name" required>
             <div class="input-group-append">
               <div class="input-group-text" style="background: rgba(0, 0, 0, 0.5);">
                 <span class="fas fa-user text-white"></span>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control form-control-sm text-white" style="background: rgba(0, 0, 0, 0.5);" id="txt_userPassword" name="txt_userPassword" placeholder="Password" required>
+            <input type="password" class="form-control form-control-sm text-white" style="background: rgba(0, 0, 0, 0.5);" id="txt_customerPassword" name="txt_customerPassword" placeholder="Password" required>
             <div class="input-group-append">
               <div class="input-group-text" style="background: rgba(0, 0, 0, 0.5);">
                 <span class="fas fa-lock text-white"></span>

@@ -47,16 +47,21 @@ $routes->get('/', 'NavigationController');
 $routes->get('sign-up', 'NavigationController::signUp');
 $routes->get('login', 'NavigationController::login');
 
+$routes->get('home', 'NavigationController::home');
+$routes->get('who-we-are', 'NavigationController::whoWeAre');
+$routes->get('contact-us', 'NavigationController::contactUs');
+$routes->get('faqs', 'NavigationController::faqs');
+
 /*
  * --------------------------------------------------------------------
  * FRONT END FUNCTIONS
  * --------------------------------------------------------------------
  */
-$routes->post('user-login', 'IndexController::login');
+$routes->post('customer-login', 'IndexController::login');
 $routes->post('user-forgot-password', 'IndexController::forgotPassword');
 $routes->post('user-change-password', 'IndexController::changePassword');
 $routes->post('customer-sign-up', 'IndexController::signUp');
-$routes->get('user-logout', 'IndexController::logout');
+$routes->get('customer-logout', 'IndexController::logout');
 
 /*
  *  ------------------------------------------------------------------
@@ -64,13 +69,10 @@ $routes->get('user-logout', 'IndexController::logout');
  *  ------------------------------------------------------------------
  */
 
-$routes->get('portal/auction-dashboard', 'Portal\NavigationController::auctionDashboard');
-$routes->get('portal/auction-bidders', 'Portal\NavigationController::auctionBidders');
-$routes->get('portal/auction-items', 'Portal\NavigationController::auctionItems');
-$routes->get('portal/auction-winners', 'Portal\NavigationController::auctionWinners');
-$routes->get('portal/auction-payments', 'Portal\NavigationController::auctionPayments');
-$routes->get('portal/auction-calendar', 'Portal\NavigationController::auctionCalendar');
-$routes->get('portal/registered-bidders', 'Portal\NavigationController::registeredBidders');
+$routes->get('portal/home', 'Portal\NavigationController::home');
+$routes->get('portal/who-we-are', 'Portal\NavigationController::whoWeAre');
+$routes->get('portal/contact-us', 'Portal\NavigationController::contactUs');
+$routes->get('portal/faqs', 'Portal\NavigationController::faqs');
 
 //////////////////////////// MY ACCOUNT ////////////////////////////////
 $routes->get('my-account', 'Portal\NavigationController::myAccount');

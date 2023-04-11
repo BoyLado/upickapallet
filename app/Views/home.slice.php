@@ -10,9 +10,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-<link rel="stylesheet" href="http://localhost/adminupickapallet/assets/AdminLTE/plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="http://localhost/upickapallet/assets/AdminLTE/plugins/fontawesome-free/css/all.min.css">
 
-<link rel="stylesheet" href="http://localhost/adminupickapallet/assets/AdminLTE/dist/css/adminlte.min.css?v=3.2.0">
+<link rel="stylesheet" href="http://localhost/upickapallet/assets/AdminLTE/dist/css/adminlte.min.css?v=3.2.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
@@ -307,7 +307,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
 <div class="container">
 <a href="../../index3.html" class="navbar-brand">
-<img src="http://localhost/adminupickapallet/assets/img/upp-logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+<img src="http://localhost/upickapallet/assets/img/upp-logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 <span class="brand-text font-weight-light"><b>U PICK A PALLET LLC</b></span>
 </a>
 <button class="navbar-toggler order-1 d-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -410,7 +410,7 @@
            <div class="col-sm-4">
              <div class="card">
                <div class="card-body">
-                 <img src="http://localhost/adminupickapallet/assets/img/banner.png" class="img-fluid" alt="Responsive image">
+                 <img src="http://localhost/upickapallet/assets/img/banner.png" class="img-fluid" alt="Responsive image">
                </div>
              </div>
            </div>
@@ -430,7 +430,7 @@
            <div class="col-sm-4 d-none d-lg-block d-md-block">
              <div class="card">
                <div class="card-body">
-                <img src="http://localhost/adminupickapallet/assets/img/banner.png" class="img-fluid" alt="Responsive 
+                <img src="http://localhost/upickapallet/assets/img/banner.png" class="img-fluid" alt="Responsive 
                 image">
                </div>
              </div>
@@ -440,16 +440,16 @@
       </div>
       </div>
          <div class="image-container">
-           <img src="http://localhost/adminupickapallet/assets/img/1.png" alt="Image 1">
-           <img src="http://localhost/adminupickapallet/assets/img/2.png" alt="Image 2">
-           <img src="http://localhost/adminupickapallet/assets/img/3.png" alt="Image 3">
-           <img src="http://localhost/adminupickapallet/assets/img/4.png" alt="Image 4">
-           <img src="http://localhost/adminupickapallet/assets/img/5.png" alt="Image 5">
-           <img src="http://localhost/adminupickapallet/assets/img/6.png" alt="Image 6">
-           <img src="http://localhost/adminupickapallet/assets/img/7.png" alt="Image 7">
-           <img src="http://localhost/adminupickapallet/assets/img/8.png" alt="Image 8">
-           <img src="http://localhost/adminupickapallet/assets/img/9.png" alt="Image 9">
-           <img src="http://localhost/adminupickapallet/assets/img/10.png" alt="Image 10">
+           <img src="http://localhost/upickapallet/assets/img/1.png" alt="Image 1">
+           <img src="http://localhost/upickapallet/assets/img/2.png" alt="Image 2">
+           <img src="http://localhost/upickapallet/assets/img/3.png" alt="Image 3">
+           <img src="http://localhost/upickapallet/assets/img/4.png" alt="Image 4">
+           <img src="http://localhost/upickapallet/assets/img/5.png" alt="Image 5">
+           <img src="http://localhost/upickapallet/assets/img/6.png" alt="Image 6">
+           <img src="http://localhost/upickapallet/assets/img/7.png" alt="Image 7">
+           <img src="http://localhost/upickapallet/assets/img/8.png" alt="Image 8">
+           <img src="http://localhost/upickapallet/assets/img/9.png" alt="Image 9">
+           <img src="http://localhost/upickapallet/assets/img/10.png" alt="Image 10">
          </div>
          <!-- Top content -->
          <div class="card-body">
@@ -458,34 +458,34 @@
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                 <div class="carousel-item col-2 col-sm-6 col-md-2 col-lg-3 active">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img1">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img1">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-2 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img2">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img2">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-2 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img3">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img3">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-2 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img4">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img4">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-2 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img5">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img5">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img6">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img6">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img7">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img7">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
-                    <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
+                    <img src="http://localhost/upickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
                 </div>
                 <div class="carousel-item col-2 col-sm-6 col-md-4 col-lg-3">
                     <img src="http://localhost/adminupickapallet/assets/img/10.png" class="img-fluid mx-auto d-block" alt="img8">
@@ -635,11 +635,11 @@
       </div>
    </footer>
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/dist/js/adminlte.min.js?v=3.2.0"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/dist/js/adminlte.min.js?v=3.2.0"></script>
 
 
 <script type="text/javascript">
@@ -674,10 +674,10 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
 </script>
 
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="http://localhost/adminupickapallet/assets/AdminLTE/dist/js/adminlte.min.js?v=3.2.0"></script>
+<script src="http://localhost/upickapallet/assets/AdminLTE/dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>
 </html>

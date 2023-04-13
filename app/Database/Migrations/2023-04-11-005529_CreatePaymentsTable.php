@@ -21,10 +21,8 @@ class CreatePaymentsTable extends Migration
             'unsigned'          => true,
             'null'              => true,
          ],
-         'product_id'         => [
-            'type'              => 'INT',
-            'constraint'        => 11,
-            'unsigned'          => true,
+         'product_ids'         => [
+            'type'              => 'JSON',
             'null'              => true,
          ],
          'cash_payment'        => [
@@ -74,6 +72,7 @@ class CreatePaymentsTable extends Migration
          ],
       ]);
       $this->forge->addKey('id', true);
+      $this->forge->addForeignKey('customer_id', 'customers', 'id', 'CASCADE', 'CASCADE');
       $this->forge->createTable('payments');
    }
 
@@ -82,18 +81,3 @@ class CreatePaymentsTable extends Migration
       $this->forge->dropTable('payments');
    }
 }
-
-
-// payments
-// id
-// customer_id
-// products_id
-// cash_payment
-// card_payment
-// sub_total
-// tax_fee
-// transaction_fee
-// total_payment
-// status
-// created_by
-// created_date

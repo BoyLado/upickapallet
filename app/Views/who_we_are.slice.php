@@ -100,13 +100,13 @@
                             </p>
                             </div>
                         </div>
-                                <div class="col-6">
-                                        <video width="100%" controls>
-                                          <source src="mov_bbb.mp4" type="video/mp4">
-                                          <source src="mov_bbb.ogg" type="video/ogg">
-                                          Your browser does not support HTML video.
-                                        </video>
-                                </div>
+                        <div class="col-6">
+                           <video width="100%" controls>
+                              <source src="mov_bbb.mp4" type="video/mp4">
+                              <source src="mov_bbb.ogg" type="video/ogg">
+                              Your browser does not support HTML video.
+                           </video>
+                        </div>
                     </div>
                         <div class="card-body row">
                                 <div class="col-6 text-center d-flex align-items-center justify-content-center">

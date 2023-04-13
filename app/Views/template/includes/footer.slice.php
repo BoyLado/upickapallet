@@ -68,7 +68,7 @@
     fontSize:'',
   };
 
-  HELPER.autoLogout();
+  // HELPER.autoLogout();
 </script>
 
 @yield('custom_scripts')

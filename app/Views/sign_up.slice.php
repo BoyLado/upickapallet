@@ -23,7 +23,8 @@
    <div class="content-header">
       <div class="container">
          <center>
-            <h2 class="text-danger mb-3"><b>Sign Up for Season Pass</b></h2>
+            <h2 class="text-danger mb-3 d-none d-lg-block"><b>Sign Up for Season Pass</b></h2>
+            <h4 class="text-danger mb-3 d-block d-lg-none"><b>Sign Up for Season Pass</b></h4>
          </center>
          <form id="form_seasonPassRegistration">
             <div class="row mb-2">
@@ -64,6 +65,9 @@
                         </div>
 
                         <div class="row">
+                           <div class="col-lg-6">
+                              
+                           </div>
                            <div class="col-lg-6 form-group">
                               <label for="txt_driverLicenseNumber">Driver’s License Number 
                                  <span class="text-red">*</span></label>
